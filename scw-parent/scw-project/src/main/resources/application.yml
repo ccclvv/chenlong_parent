@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: scw-project
+  # 配置数据库连接
+  datasource:
+    url: jdbc:mysql://localhost:3306/atcrowdfunding?serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  #配置redis
+  redis:
+    port: 6379
+    host: 192.168.188.146
+
+
+server:
+  port: 8000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#配置日志存储位置  和 日志模式
+logging:
+  file:
+    path: D:\loggin-rizhi
+  level:
+    com:
+      chenlong: debug
+
+#oss文件上传的配置
+oss:
+  endpoint: oss-cn-beijing.aliyuncs.com
+  accessKeyId: LTAI5tCXM35RCbkhrQf75vSB
+  accessKeySecret: yjbiwrPIUnEvdr4W3PIiCGsE5ZYYDO
+  bucketName: 0416-chenlong
+  bucketUrl: https://0416-chenlong.oss-cn-beijing.aliyuncs.com/
+
+

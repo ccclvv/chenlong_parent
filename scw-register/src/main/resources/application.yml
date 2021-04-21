@@ -1,0 +1,21 @@
+# 设定模块名
+spring:
+  application:
+    name: scw-register
+
+# 端口号
+server:
+  port: 8761
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 不注册到其他注册中心
+    register-with-eureka: false
+    # 不从其他注册中心获取数据
+    fetch-registry: false
+    service-url:
+      # 设置访问注册中心的路径
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka

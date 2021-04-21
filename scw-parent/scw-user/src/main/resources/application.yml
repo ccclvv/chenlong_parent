@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: scw-user
+  # 配置数据库连接
+  datasource:
+    url: jdbc:mysql://localhost:3306/atcrowdfunding?serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  #配置redis
+  redis:
+    port: 6379
+    host: 192.168.188.146
+
+
+server:
+  port: 7000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#配置日志存储位置  和 日志模式
+logging:
+  file:
+    path: D:\loggin-rizhi
+  level:
+    com:
+      chenlong: debug
+
+#自定义短信发送的数据
+sms:
+  host: http://dingxin.market.alicloudapi.com
+  path: /dx/sendSms
+  method: POST
+  appcode: a1a9fc8b65b647b2a71ce8db0324b312
+
+
